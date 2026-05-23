@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rec Room 虛擬互動空間設計作品集 | 申請專用展示網頁</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#e8710a',
+                            orangeHover: '#cf6004',
+                            orangeLight: '#fdf2e9',
+                            textDark: '#202124',
+                            textSecondary: '#5f6368',
+                            grayBg: '#f8f9fa',
+                            border: '#dadce0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Google Sans"', 'Inter', 'Noto Sans TC', 'Roboto', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar matching sleek design portfolio */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8f9fa;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dadce0;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #bdc1c6;
+        }
+    </style>
+</head>
+<body class="bg-white text-brand-textDark font-sans selection:bg-brand-orange/10 selection:text-brand-orange">
+
+    <!-- 1. STICKY TOP NAVIGATION BAR (最上方置頂導覽列) -->
+    <nav class="sticky top-0 z-50 w-full bg-white/90 border-b border-brand-border py-4 px-6 backdrop-blur-md shadow-sm">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="font-extrabold text-base tracking-wider text-brand-textDark uppercase">Rec Room 作品展示</span>
+                <span class="text-xs text-brand-textSecondary border-l border-brand-border pl-3">互動空間與系統設計</span>
+            </div>
+            <!-- Navigation Anchors -->
+            <div class="flex items-center space-x-2 sm:space-x-4 text-xs sm:text-sm font-semibold text-brand-textSecondary">
+                <a href="#intro-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">專案概述</a>
+                <a href="#stats-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">設計指標</a>
+                <a href="#dorm-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Smart Dorm 系列</a>
+                <a href="#room-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">空間創作</a>
+                <a href="#method-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">創作方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER (大版面頁首區區塊) -->
+    <header class="relative w-full bg-brand-grayBg border-b border-brand-border overflow-hidden">
+        <!-- Abstract Modernist Geometric Background -->
+        <div class="absolute inset-0 opacity-30 pointer-events-none">
+            <div class="absolute top-10 left-10 w-80 h-80 rounded-full bg-brand-orange/5 blur-3xl"></div>
+            <div class="absolute bottom-10 right-20 w-96 h-96 rounded-full bg-brand-orange/10 blur-3xl"></div>
+            <!-- Technical Architecture Grid Overlay -->
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#dadce0_1px,transparent_1px),linear-gradient(to_bottom,#dadce0_1px,transparent_1px)] bg-[size:50px_50px] opacity-20"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 pt-20 pb-16 relative z-10 flex flex-col items-center lg:items-start lg:flex-row lg:gap-8">
+            <!-- Designer Monogram / Minimalist Profile Image -->
+            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-sm bg-white flex items-center justify-center overflow-hidden shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-brand-orange">
+                    <circle cx="50" cy="50" r="48" fill="#fdf2e9" stroke="#e8710a" stroke-width="2" />
+                    <!-- Abstract geometric drawing tool symbol representing Spatial Design -->
+                    <path d="M35,65 L50,30 L65,65 Z" fill="none" stroke="#e8710a" stroke-width="3" stroke-linejoin="round" />
+                    <line x1="28" y1="65" x2="72" y2="65" stroke="#e8710a" stroke-width="3" />
+                    <circle cx="50" cy="30" r="4" fill="#e8710a" />
+                </svg>
+            </div>
+
+            <!-- Profile Title & Subtitle -->
+            <div class="mt-6 lg:mt-4 text-center lg:text-left space-y-3">
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-textDark">
+                    三維虛擬空間設計與互動系統作品集
+                </h1>
+                <p class="text-sm sm:text-base text-brand-textSecondary font-medium max-w-2xl leading-relaxed">
+                    本作品集專注於新型態虛擬社群平台（Spatial Social Platform）之空間架構。透過幾何美學控制、模組化裝修系統與 Circuits V2 邏輯系統，將數位空間打造成具備物理回饋與人機互動的沉浸式體驗載體。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Grid Content -->
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
+
+        <!-- 2. WEBPAGE DESCRIPTION (網頁說明) -->
+        <section id="intro-section" class="space-y-4 border-l-4 border-brand-orange pl-6 py-2 scroll-mt-24">
+            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">設計願景與研究定位</h2>
+            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium">
+                在元宇宙（Metaverse）與虛擬社交盛行的時代下，數位空間已不僅僅是傳統建築的簡單 3D 鏡像，而是兼具<b>感知、回應與社交行為引導</b>的智慧容器。
+                本網頁歸檔之「Smart Dorm」智慧宿舍系列發明，旨在探索極度受限的渲染負載（Ink Budget）下，如何兼顧空間美感與高度自動化的互動體驗；而「MasterBartender」則著眼於大尺度社交空間的氛圍營造與物理腳本整合。希望藉此設計，展現將數位媒介化為兼具美感與實用性空間的實踐潛能。
+            </p>
+        </section>
+
+        <!-- 3. DATA GRID (數據展示) -->
+        <section id="stats-section" class="space-y-8 scroll-mt-24">
+            <div class="flex items-center space-x-2">
+                <h3 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">作品規模與設計指標統計</h3>
+            </div>
+
+            <!-- KPI Cards Overview -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
+                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider">累計作品流通代幣</span>
+                    <div class="text-2xl font-extrabold text-brand-textDark mt-1">₳ 16,230,375</div>
+                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1">證明設計在虛擬市集的極高認受與流暢度</p>
+                </div>
+                <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
+                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider">付費空間部署量</span>
+                    <div class="text-2xl font-extrabold text-brand-textDark mt-1">15,414 次</div>
+                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1">經全球多元玩家於個人房間內實地安裝部署</p>
+                </div>
+                <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
+                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider">活躍社群追蹤人數</span>
+                    <div class="text-2xl font-extrabold text-brand-textDark mt-1">7,742 人</div>
+                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1">持續互動與收集設計反饋的真實用戶群</p>
+                </div>
+            </div>
+
+            <!-- Layout Split: Inventions Table (Left) & Room Creation Block (Right) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Left Column: Inventions (lg:col-span-8) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider">發明作品數據 (Inventions Stats)</h4>
+                    <div class="bg-white rounded-2xl border border-brand-border overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm border-collapse">
+                                <thead>
+                                    <tr class="bg-brand-grayBg border-b border-brand-border text-brand-textSecondary font-bold text-xs uppercase tracking-wide">
+                                        <th class="p-4">發明作品 (Invention Showcase)</th>
+                                        <th class="p-4 text-right">流通價值 (Earned Tokens)</th>
+                                        <th class="p-4 text-right">部署次數 (Purchases)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-brand-border text-brand-textDark font-medium">
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <!-- Amplified image preview dimensions (w-24 h-14) -->
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                                                <svg viewBox="0 0 100 60" class="w-full h-full">
+                                                    <rect width="100%" height="100%" fill="#fdf2e9"/>
+                                                    <path d="M50,15 L80,35 L50,50 L20,35 Z" fill="#e8710a" opacity="0.8"/>
+                                                    <path d="M20,35 L50,50 L50,55 L20,40 Z" fill="#cf6004"/>
+                                                    <path d="M50,50 L80,35 L80,40 L50,55 Z" fill="#b05102"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <span class="font-bold text-sm block">Smart Dorm 2</span>
+                                                <span class="text-[11px] text-brand-textSecondary font-semibold font-mono">Invention ID: sd2</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 7,840,000</td>
+                                        <td class="p-4 text-right">5,600 次</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                                                <svg viewBox="0 0 100 60" class="w-full h-full">
+                                                    <rect width="100%" height="100%" fill="#fdf2e9"/>
+                                                    <path d="M50,12 L80,30 L50,45 L20,30 Z" fill="#e8710a" opacity="0.6"/>
+                                                    <path d="M50,22 L80,35 L50,48 L20,35 Z" fill="#cf6004" opacity="0.8"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <span class="font-bold text-sm block">Smart Dorm 3</span>
+                                                <span class="text-[11px] text-brand-textSecondary font-semibold font-mono">Invention ID: sd3</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 4,683,350</td>
+                                        <td class="p-4 text-right">5,589 次</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                                                <svg viewBox="0 0 100 60" class="w-full h-full">
+                                                    <rect width="100%" height="100%" fill="#fdf2e9"/>
+                                                    <path d="M50,15 L80,35 L50,50 L20,35 Z" fill="#e8710a" opacity="0.4"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <span class="font-bold text-sm block">Smart Dorm 1</span>
+                                                <span class="text-[11px] text-brand-textSecondary font-semibold font-mono">Invention ID: sd1</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 1,571,500</td>
+                                        <td class="p-4 text-right">2,245 次</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                                                <svg viewBox="0 0 100 60" class="w-full h-full">
+                                                    <rect width="100%" height="100%" fill="#fdf2e9"/>
+                                                    <path d="M50,15 L75,30 L50,45 L25,30 Z" fill="#e8710a" opacity="0.3"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <span class="font-bold text-sm block">sDorm</span>
+                                                <span class="text-[11px] text-brand-textSecondary font-semibold font-mono">Invention ID: sd_s</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 1,567,650</td>
+                                        <td class="p-4 text-right">900 次</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 flex items-center justify-center shrink-0 overflow-hidden shadow-sm">
+                                                <svg viewBox="0 0 100 60" class="w-full h-full">
+                                                    <rect width="100%" height="100%" fill="#fdf2e9"/>
+                                                    <path d="M50,10 L80,28 L50,42 L20,28 Z" fill="#e8710a" opacity="0.9"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <span class="font-bold text-sm block">Smart Dorm 4</span>
+                                                <span class="text-[11px] text-brand-textSecondary font-semibold font-mono">Invention ID: sd4</span>
+                                            </div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 311,000</td>
+                                        <td class="p-4 text-right">450 次</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Room Creation (lg:col-span-4) -->
+                <div class="lg:col-span-4 space-y-4 flex flex-col">
+                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider">房間創作 (Room Creation)</h4>
+                    <div class="bg-brand-grayBg rounded-2xl border border-brand-border p-6 flex flex-col justify-between flex-1 space-y-4">
+                        <div class="space-y-3">
+                            <h5 class="text-lg font-bold text-brand-textDark">MasterBartender</h5>
+                            
+                            <!-- Significantly Enlarged preview image container for Room design (Isometric Bar concept) -->
+                            <div class="w-full aspect-[16/10] rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center overflow-hidden shadow-sm my-3">
+                                <svg viewBox="0 0 100 60" class="w-full h-full">
+                                    <rect width="100%" height="100%" fill="#eef2ff"/>
+                                    <!-- Neon Bar Geometric Representation -->
+                                    <polygon points="50,15 85,32 50,48 15,32 Z" fill="#202124" stroke="#e8710a" stroke-width="1.5"/>
+                                    <polygon points="30,30 50,20 70,30 70,35 50,45 30,35" fill="#3c4043" stroke="#e8710a" stroke-width="1"/>
+                                    <line x1="30" y1="32" x2="50" y2="42" stroke="#e8710a" stroke-width="1.5"/>
+                                    <line x1="50" y1="42" x2="70" y2="32" stroke="#e8710a" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            
+                            <p class="text-xs text-brand-textSecondary font-semibold leading-relaxed">
+                                專為多人在線社交打造的空間提案，不採用單一發明（Inventions）形式釋出，而以「整房發布」形式供全球用戶共同遊玩、互動。
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-brand-border flex justify-between items-center">
+                            <span class="text-xs font-bold text-brand-textSecondary">房造訪次數</span>
+                            <span class="text-xs font-extrabold text-indigo-700 bg-indigo-50 border border-indigo-100 px-3 py-1.5 rounded-lg font-mono">4,200+ 訪客瀏覽</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. SMART DORM SERIES SHOWCASE (Smart Dorm 1~4, sDorm) -->
+        <section id="dorm-section" class="space-y-12 scroll-mt-24">
+            <div class="border-b border-brand-border pb-4">
+                <h3 class="text-2xl font-bold text-brand-textDark tracking-tight">Smart Dorm 智慧互動宿舍旗艦系列</h3>
+                <p class="text-brand-textSecondary text-sm mt-1">
+                    在高度受限的空間預算中，探索極具機能性的自動化幾何變型。
+                </p>
+            </div>
+
+            <!-- Series Items -->
+            <div class="space-y-16">
+                
+                <!-- 1. Smart Dorm 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm flex items-center justify-center">
+                        <svg viewBox="0 0 400 225" class="w-full h-full bg-gradient-to-br from-orange-50/50 to-orange-100/30">
+                            <rect width="100%" height="100%" fill="none"/>
+                            <path d="M200,45 L330,110 L200,175 L70,110 Z" fill="#FFFFFF" stroke="#dadce0" stroke-width="1.5"/>
+                            <polygon points="120,110 200,70 280,110 200,150" fill="#e8710a" opacity="0.3"/>
+                            <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-weight="extrabold" font-size="16" fill="#e8710a" opacity="0.7">SMART DORM 1 | THE PIONEER</text>
+                        </svg>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 1：探索互動空間的起始點</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>流通收益: <strong class="text-brand-textDark">₳ 1,571,500</strong></span>
+                            <span>部署安裝: <strong class="text-brand-textDark">2,245 次</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                            做為整個智慧室內設計系列的「概念原形機」，Smart Dorm 1 首度成功將 Circuits V1 傳統模擬電路轉化為智慧自動化偵測。
+                            其核心設計亮點在於「無障礙空間動線規劃」，在玩家一鍵激活時，能夠通過觸發區域 (Trigger Zones) 自動調整吊燈亮彩，消除了靜態 3D 模型死氣沉沉的呆板感。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Smart Dorm 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
+                        <!-- Simulated YouTube Video Screen for peak design showcase -->
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Smart Dorm 2 Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 2：多層次照明與物理感知機制</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>流通收益: <strong class="text-brand-textDark">₳ 7,840,000</strong></span>
+                            <span>部署安裝: <strong class="text-brand-textDark">5,600 次</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                            本系列最知名的空間代表作。Smart Dorm 2 以「木質侘寂風」與「赛博霓虹」的異質衝突為美學起點。
+                            技術上首度導入 Circuits V2 狀態同步機，將多級光源調節（Dimming System）完全模組化。玩家進入後，房間會自動讀取用戶檔案，緩緩將照明調校至對應的暖度。
+                        </p>
+                        <ul class="text-xs text-brand-textSecondary space-y-1.5 font-semibold">
+                            <li class="flex items-center gap-1.5"><i data-lucide="arrow-right" class="text-brand-orange w-3.5 h-3.5"></i> 內置隱藏式活塞床，提供靈活的空間動線調配</li>
+                            <li class="flex items-center gap-1.5"><i data-lucide="arrow-right" class="text-brand-orange w-3.5 h-3.5"></i> 阻尼擬真燈效，模擬真實的日光沉浸與衰減效果</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Smart Dorm 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm flex items-center justify-center">
+                        <svg viewBox="0 0 400 225" class="w-full h-full bg-gradient-to-br from-amber-50 to-orange-100/50">
+                            <path d="M200,30 L350,110 L200,190 L50,110 Z" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1.5"/>
+                            <polygon points="50,110 200,190 200,215 50,135" fill="#D1D5DB" stroke="#9CA3AF" stroke-width="1"/>
+                            <polygon points="200,190 350,110 350,135 200,215" fill="#C4C6CC" stroke="#9CA3AF" stroke-width="1"/>
+                            <polygon points="120,110 200,70 280,110 200,150" fill="#e8710a" opacity="0.8" stroke="#ffffff" stroke-width="1"/>
+                            <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-weight="extrabold" font-size="16" fill="#e8710a">SMART DORM 3 | PHYSICS ENGINE</text>
+                        </svg>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 3：空間幾何可變形的極致實踐</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>流通收益: <strong class="text-brand-textDark">₳ 4,683,350</strong></span>
+                            <span>部署安裝: <strong class="text-brand-textDark">5,589 次</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                            Smart Dorm 3 挑戰了高難度的「動態折疊機械」。
+                            設計理念為「微型公寓的無限化」。當點擊中央控制閥時，次要隔牆將伴隨平穩的活塞旋轉與消隱，原本獨立的起居室可無縫伸展為雙層閣樓。全邏輯控制在不佔用額外 Ink 負載的條件下運轉。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. sDorm -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm flex items-center justify-center">
+                        <svg viewBox="0 0 400 225" class="w-full h-full bg-gradient-to-br from-slate-100 to-slate-200">
+                            <path d="M200,30 L340,100 L200,170 L60,100 Z" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1.5"/>
+                            <line x1="100" y1="120" x2="200" y2="170" stroke="#e8710a" stroke-width="3"/>
+                            <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-weight="extrabold" font-size="16" fill="#e8710a">SDORM | EXTREME REDUCTION</text>
+                        </svg>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">sDorm：極致減法與 VR 幀率優化</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>流通收益: <strong class="text-brand-textDark">₳ 1,567,650</strong></span>
+                            <span>部署安裝: <strong class="text-brand-textDark">900 次</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                            設計的奧義在於「適可而止」。
+                            這款專門針對行動 VR 設備優化的極簡空間，大膽剔除了多餘裝飾。
+                            將頂部三角面數（Polycount）壓縮至原本的五分之一，把資源傾注於高精準、零阻滯的燈光回饋，證明即使在硬體高度限制下亦能產出高層次的使用者流程。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. Smart Dorm 4 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm flex items-center justify-center">
+                        <svg viewBox="0 0 400 225" class="w-full h-full bg-gradient-to-br from-orange-100/20 to-orange-200/20">
+                            <path d="M200,40 L320,100 L200,160 L80,100 Z" fill="#FFFFFF" stroke="#e8710a" stroke-width="1.5"/>
+                            <circle cx="200" cy="100" r="25" fill="none" stroke="#e8710a" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-weight="extrabold" font-size="16" fill="#e8710a">SMART DORM 4 | EVOLUTION NEXT</text>
+                        </svg>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 4：模組化自適應與次世代多功能</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>流通收益: <strong class="text-brand-textDark">₳ 311,000</strong></span>
+                            <span>部署安裝: <strong class="text-brand-textDark">450 次</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                            做為本系列近期之集大成作品，Smart Dorm 4 探索了「模組自由拆裝 (Modular Assembly)」的概念。
+                            用戶可任意調整各個功能單元（如衛浴、工作區、視聽庫）在宿舍中的坐標。
+                            其底層編程可根據單元所處方位，自動切換局域網路信號的廣播方向，實現空間的高適應性（Adaptability）。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. ROOM CREATION SHOWCASE (MasterBartender - 獨立社交空間) -->
+        <section id="room-section" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-brand-border pb-4">
+                <h3 class="text-2xl font-bold text-brand-textDark">沉浸式社交空間創作 (Room Creation)</h3>
+                <p class="text-brand-textSecondary text-sm mt-1">突破 Invention 微型發明限制，塑造完整的巨幅沉浸式虛擬社交空間。</p>
+            </div>
+
+            <!-- MasterBartender showcase card -->
+            <div class="bg-brand-grayBg rounded-3xl border border-brand-border overflow-hidden">
+                <!-- Large Elegant Vector Concept Diagram -->
+                <div class="w-full bg-gradient-to-r from-orange-50 to-orange-100/50 py-12 flex justify-center border-b border-brand-border">
+                    <svg viewBox="0 0 500 250" class="w-full max-w-lg h-auto">
+                        <polygon points="250,30 460,130 250,230 40,130" fill="#202124" stroke="#e8710a" stroke-width="2"/>
+                        <!-- Neon light bar counter model -->
+                        <polygon points="150,130 250,80 350,130 350,150 250,200 150,150" fill="#3c4043" stroke="#e8710a" stroke-width="1.5"/>
+                        <!-- Elegant bar neon glowing lines -->
+                        <line x1="150" y1="135" x2="250" y2="185" stroke="#e8710a" stroke-width="2.5" />
+                        <line x1="250" y1="185" x2="350" y2="135" stroke="#e8710a" stroke-width="2.5" />
+                        <text x="30" y="40" font-family="sans-serif" font-weight="extrabold" font-size="14" fill="#e8710a">ROOM CREATION: MASTER BARTENDER</text>
+                        <!-- Floating glasses schematic -->
+                        <circle cx="250" cy="120" r="12" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7"/>
+                        <circle cx="210" cy="110" r="8" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+                    </svg>
+                </div>
+
+                <div class="p-8 space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <h4 class="text-2xl font-bold text-google-textDark">Room: ^MasterBartender</h4>
+                            <p class="text-xs text-brand-textSecondary font-bold mt-1">互動維度: <span class="text-brand-orange">多人在線物理調酒模擬</span> | 全球玩家造訪: 4,200+ 人次</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-brand-textSecondary leading-relaxed">
+                        「MasterBartender」是一場對於虛擬酒館社交情境的沈浸式空間提案。
+                        設計摒棄了傳統遊戲乏味的面板選單互動，改採<b>高度物理化觸感行為（Gesture-Based Interaction）</b>。
+                        玩家可在吧台前實體抓取杯具、倒入不同化學物理粒子（模擬各色調酒），並通過手部物理搖盪（Shake Event）觸發 Circuits V2 粒子加速計，調配出客製化的高光液體。
+                        這完美地展示了將視覺美感、聲學動態、以及網絡變數同步融合成高流暢度虛擬劇場所能達到的高度。
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2.5 py-1 bg-white border border-brand-border text-[11px] font-bold text-brand-textSecondary rounded-lg">手部姿態碰撞捕捉</span>
+                        <span class="px-2.5 py-1 bg-white border border-brand-border text-[11px] font-bold text-brand-textSecondary rounded-lg">動態流體粒子混合系統</span>
+                        <span class="px-2.5 py-1 bg-white border border-brand-border text-[11px] font-bold text-brand-textSecondary rounded-lg">低多邊形酒館氛圍渲染</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CREATION METHOD (創作方式 - Maker Pen 系統說明) -->
+        <section id="method-section" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-brand-border pb-4">
+                <h3 class="text-2xl font-bold text-brand-textDark">我的創作方式 (Creation Methodology)</h3>
+                <p class="text-brand-textSecondary text-sm mt-1">剖析 Rec Room 核心空間建構器 Maker Pen，如何在科技與設計交界處進行系統開發。</p>
+            </div>
+
+            <!-- Two Column Detailed Showcase of Maker Pen usage -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Method 1: Spatial 3D Modeling -->
+                <div class="p-6 rounded-2xl bg-brand-grayBg border border-brand-border space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange">
+                        <i data-lucide="box" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-textDark">三維幾何空間建模 (3D Spatial Modeling)</h4>
+                    <p class="text-xs text-brand-textSecondary leading-relaxed">
+                        利用 3D 虛擬環境中的 <b>Maker Pen</b> 工具，我們得以直接進行沈浸式建模。
+                        設計中主要透過立方體、圓柱、球體等原始幾何體 (Primitives) 的布林運算與比例調整。
+                        為了追求行動 VR 與 PC 跨平台的無障礙體驗，我高度專注於面數（Vertex Counts）與光影烘焙（Lightmapping）的最佳化平衡。
+                        每一片 Smart Dorm 智慧牆面與 MasterBartender 吧台邊角，皆經過微米級坐標對齊，兼具雕塑美學與系統運算容差。
+                    </p>
+                    <div class="text-[10px] text-brand-orange font-bold font-mono">CORE: low-poly geometry & mesh efficiency</div>
+                </div>
+
+                <!-- Method 2: Circuits V2 Programming -->
+                <div class="p-6 rounded-2xl bg-brand-grayBg border border-brand-border space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange">
+                        <i data-lucide="binary" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-textDark">事件驅動電路邏輯 (Circuits V2 Logic)</h4>
+                    <p class="text-xs text-brand-textSecondary leading-relaxed">
+                        「動態」才是空間具備生命力的主因。
+                        利用平台底層視覺化腳本語言 <b>Circuits V2</b>，我在三維空間內拉設錯綜複雜的邏輯控制電網。
+                        透過事件分發（Event Listeners）、異步時間戳同步（Timers）以及網絡暫存記憶變數，
+                        將所有實體家具轉譯為「智慧型網路物件（State-Synchronized Entities）」，使多名使用者在同一個空間中操作同一把吧台調酒壺或隱藏床鋪時，能得到毫秒級的無延遲即時反饋。
+                    </p>
+                    <div class="text-[10px] text-brand-orange font-bold font-mono">CORE: event-driven callbacks & sync algorithms</div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (頁尾 - 極簡設計) -->
+    <footer class="border-t border-brand-border bg-brand-grayBg py-12 px-6 mt-20">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center text-white font-black text-sm">
+                    R
+                </div>
+                <div>
+                    <span class="font-extrabold text-sm text-brand-textDark uppercase">Rec Room UGC Portfolio</span>
+                    <span class="text-[10px] text-brand-textSecondary block uppercase font-bold tracking-wider">Spatial Computing & Interactive Systems</span>
+                </div>
+            </div>
+            
+            <p class="text-xs text-brand-textSecondary font-semibold">
+                © 2026 CY 虛擬空間互動設計作品集. 全球通用設計申請認證。
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide icons on load
+        window.onload = function () {
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>

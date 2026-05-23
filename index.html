@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rec Room Virtual Space Design Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#e8710a',
+                            orangeHover: '#cf6004',
+                            orangeLight: '#fdf2e9',
+                            textDark: '#202124',
+                            textSecondary: '#5f6368',
+                            grayBg: '#f8f9fa',
+                            border: '#dadce0'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Google Sans"', 'Inter', 'Roboto', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f8f9fa; }
+        ::-webkit-scrollbar-thumb { background: #dadce0; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #bdc1c6; }
+        #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+        #mobile-menu.hidden { max-height: 0; opacity: 0; overflow: hidden; }
+        #mobile-menu:not(.hidden) { max-height: 300px; opacity: 1; }
+    </style>
+</head>
+<body class="bg-white text-brand-textDark font-sans selection:bg-brand-orange/10 selection:text-brand-orange">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 w-full bg-white/90 border-b border-brand-border py-3 px-4 sm:px-6 backdrop-blur-md shadow-sm">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <span class="font-extrabold text-sm sm:text-base tracking-wider text-brand-textDark uppercase">Rec Room Portfolio</span>
+                <span class="hidden sm:inline text-xs text-brand-textSecondary border-l border-brand-border pl-3">Interactive Spatial Design</span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-3 text-xs sm:text-sm font-semibold text-brand-textSecondary">
+                <a href="#intro-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Overview</a>
+                <a href="#stats-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Stats</a>
+                <a href="#dorm-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Smart Dorm</a>
+                <a href="#room-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Room Creation</a>
+                <a href="#method-section" class="px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Methodology</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-brand-grayBg transition-colors" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-5 h-5 text-brand-textDark"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden max-w-5xl mx-auto pt-3 pb-1">
+            <div class="flex flex-col space-y-1 text-sm font-semibold text-brand-textSecondary">
+                <a href="#intro-section" class="px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Overview</a>
+                <a href="#stats-section" class="px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Stats</a>
+                <a href="#dorm-section" class="px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Smart Dorm</a>
+                <a href="#room-section" class="px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Room Creation</a>
+                <a href="#method-section" class="px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Methodology</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="relative w-full bg-brand-grayBg border-b border-brand-border overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="assets/images/background-image.jpg" alt="" class="w-full h-full object-cover opacity-75">
+        </div>
+        <div class="absolute inset-0 bg-white/30"></div>
+        <div class="max-w-5xl mx-auto px-6 pt-20 pb-16 relative z-10 flex flex-col items-center lg:items-start lg:flex-row lg:gap-8">
+            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-md bg-white flex items-center justify-center overflow-hidden shrink-0">
+                <img src="assets/images/avatar.jpg" alt="Creator avatar" class="w-full h-full object-cover">
+            </div>
+            <div class="mt-6 lg:mt-4 text-center lg:text-left space-y-3 bg-white/70 backdrop-blur-sm rounded-2xl p-6">
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-textDark">3D Virtual Space Design & Interactive Systems Portfolio</h1>
+                <p class="text-sm sm:text-base text-brand-textSecondary font-medium max-w-2xl leading-relaxed">
+                    This portfolio showcases various creations I developed on the virtual reality 
+                    platform Rec Room. Using the built-in creation tool, Maker Pen, I designed 3D 
+                    models, developed circuit-based logic systems, and created Dorm Rooms featuring 
+                    a variety of interactive mechanisms, growing a subscriber base to <span class="text-brand-orange font-extrabold"></span>7.7K+ subscribers</span> through 
+                    continuous iteration, experimentation, and logic-driven design.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
+
+        <!-- INTRO -->
+        <section id="intro-section" class="space-y-4 border-l-4 border-brand-orange pl-6 py-2 scroll-mt-24">
+            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">Design Philosophy</h2>
+            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium">
+                My approach centers on maximizing creativity within limited space and resources by 
+                leveraging clever constraints and the right tools. While many creators strive for 
+                hyper-realism and intricate details, I lean toward a minimalist aesthetic infused 
+                with hidden mechanics and innovative, engaging interactions—unlocking the full 
+                potential of imagination within a space.
+            </p>
+        </section>
+
+        <!-- STATS -->
+        <section id="stats-section" class="space-y-8 scroll-mt-24">
+            <h3 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">Stats</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
+                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider">Total Earned Tokens</span>
+                    <div class="text-2xl font-extrabold text-brand-textDark mt-1">₳ 16M+</div>
+                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1">
+                        Demonstrates high market appeal and design fluency, having ranked among 
+                        the Top 100 Sellers of the Year.
+                    </p>
+                </div>
+                <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
+                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider">Subscribers</span>
+                    <div class="text-2xl font-extrabold text-brand-textDark mt-1">7.7k+</div>
+                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1">
+                        Successfully grew and managed a subscriber base to 7.7K+ by delivering 
+                        high-quality, interactive virtual spaces.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Inventions Table & Room Creation -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-8 space-y-4">
+                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider">Invention Statistics</h4>
+                    <div class="bg-white rounded-2xl border border-brand-border overflow-hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm border-collapse">
+                                <thead>
+                                    <tr class="bg-brand-grayBg border-b border-brand-border text-brand-textSecondary font-bold text-xs uppercase tracking-wide">
+                                        <th class="p-4">Invention</th>
+                                        <th class="p-4 text-right">Earned Tokens</th>
+                                        <th class="p-4 text-right">Purchases</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-brand-border text-brand-textDark font-medium">
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 shrink-0 overflow-hidden shadow-sm">
+                                                <img src="assets/images/smart-dorm-2.jpg" alt="Smart Dorm 2" class="w-full h-full object-cover">
+                                            </div>
+                                            <div><span class="font-bold text-sm block">Smart Dorm 2</span></div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 7,840,000</td>
+                                        <td class="p-4 text-right">5,600</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 shrink-0 overflow-hidden shadow-sm">
+                                                <img src="assets/images/smart-dorm-3.jpg" alt="Smart Dorm 3" class="w-full h-full object-cover">
+                                            </div>
+                                            <div><span class="font-bold text-sm block">Smart Dorm 3</span></div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 4,683,350</td>
+                                        <td class="p-4 text-right">5,589</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 shrink-0 overflow-hidden shadow-sm">
+                                                <img src="assets/images/smart-dorm.jpg" alt="Smart Dorm 1" class="w-full h-full object-cover">
+                                            </div>
+                                            <div><span class="font-bold text-sm block">Smart Dorm</span></div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 1,571,500</td>
+                                        <td class="p-4 text-right">2,245</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 shrink-0 overflow-hidden shadow-sm">
+                                                <img src="assets/images/sdorm.jpg" alt="sDorm" class="w-full h-full object-cover">
+                                            </div>
+                                            <div><span class="font-bold text-sm block">sDorm</span></div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 1,567,650</td>
+                                        <td class="p-4 text-right">900</td>
+                                    </tr>
+                                    <tr class="hover:bg-brand-grayBg/50 transition-colors">
+                                        <td class="p-4 flex items-center space-x-4">
+                                            <div class="w-24 h-14 rounded-lg bg-orange-50 border border-brand-orange/20 shrink-0 overflow-hidden shadow-sm">
+                                                <img src="assets/images/smart-dorm-4.jpg" alt="Smart Dorm 4" class="w-full h-full object-cover">
+                                            </div>
+                                            <div><span class="font-bold text-sm block">Smart Dorm 4</span></div>
+                                        </td>
+                                        <td class="p-4 text-right text-brand-orange font-bold">₳ 311,000</td>
+                                        <td class="p-4 text-right">450</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Room Creation -->
+                <div class="lg:col-span-4 space-y-4 flex flex-col">
+                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider">Room Creation</h4>
+                    <div class="bg-brand-grayBg rounded-2xl border border-brand-border p-6 flex flex-col justify-between flex-1 space-y-4">
+                        <div class="space-y-3">
+                            <h5 class="text-lg font-bold text-brand-textDark">MasterBartender</h5>
+                            <div class="w-full aspect-[16/10] rounded-xl bg-indigo-50 border border-indigo-100 overflow-hidden shadow-sm my-3">
+                                <img src="assets/images/master-bartender.jpg" alt="MasterBartender" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-xs text-brand-textSecondary font-semibold leading-relaxed">
+                                This room is a hangout place that includes a main game inspired by the classic game 
+                                "Root Beer Tapper".
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-brand-border flex justify-between items-center">
+                            <span class="text-xs font-bold text-brand-textSecondary">Room Visits</span>
+                            <span class="text-xs font-extrabold text-indigo-700 bg-indigo-50 border border-indigo-100 px-3 py-1.5 rounded-lg font-mono">1,500+ visitors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SMART DORM SERIES -->
+        <section id="dorm-section" class="space-y-12 scroll-mt-24">
+            <div class="border-b border-brand-border pb-4">
+                <h3 class="text-2xl font-bold text-brand-textDark tracking-tight">Smart Dorm — Intelligent Interactive Dormitory Series</h3>
+                <p class="text-brand-textSecondary text-sm mt-1">Exploring highly functional automated geometric transformations within severely constrained spatial budgets.</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Smart Dorm 1 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
+                        <img src="assets/images/smart-dorm.jpg" alt="Smart Dorm" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">
+                            Smart Dorm: The Starting Point of My Creator Journey in Rec Room
+                        </h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>Earned: <strong class="text-brand-textDark">₳ 1,571,500</strong></span>
+                            <span>Purchases: <strong class="text-brand-textDark">2,245</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                            As my first commercial release in Rec Room, this project explores spatial 
+                            optimization and interactive design. I engineered the dorm with dynamic, 
+                            space-saving mechanisms: a button-activated transforming bed, a wall-deployed 
+                            TV, and retractable hidden stairs.<br><br>
+
+                            Officially featured by Rec Room, the project achieved thousands of sales in its 
+                            first week. This explosive debut validated my design approach and laid the foundation 
+                            for my signature Smart Dorm series.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Smart Dorm 2 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
+                        <img src="assets/images/smart-dorm-2.jpg" alt="Smart Dorm 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 2: Minimalist Aesthetic & Sleek Mechanics</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>Earned: <strong class="text-brand-textDark">₳ 7,840,000</strong></span>
+                            <span>Deployments: <strong class="text-brand-textDark">5,600</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                            Leveraging my experience from the first project, I designed a second generation featuring 
+                            a minimalist, modern aesthetic and a more seamless user experience. I introduced innovative 
+                            mechanics to deliver a unique spatial experience, such as color-changing windows and an 
+                            immersive tunnel-hovercar transition for player departures. This project ultimately became 
+                            my best-selling and most successful creation to date.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Smart Dorm 3 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
+                        <img src="assets/images/smart-dorm-3.jpg" alt="Smart Dorm 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 3: Ultimate Geometric Deformation</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>Earned: <strong class="text-brand-textDark">₳ 4,683,350</strong></span>
+                            <span>Deployments: <strong class="text-brand-textDark">5,589</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">Smart Dorm 3 tackles the high-difficulty challenge of "dynamic folding mechanics." The design concept is "infinite micro-apartments." When the central control valve is clicked, secondary partition walls smoothly rotate and disappear via pistons, seamlessly expanding an independent living room into a double-story loft — all without consuming additional Ink budget.</p>
+                    </div>
+                </div>
+
+                <!-- sDorm -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
+                        <iframe class="lazy-video w-full h-full" data-src="https://www.youtube.com/embed/zvzsOmHBCo0?autoplay=1&mute=1&loop=1&playlist=zvzsOmHBCo0&enablejsapi=1" title="sDorm Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">sDorm: Extreme Reduction & VR Frame Rate Optimization</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>Earned: <strong class="text-brand-textDark">₳ 1,567,650</strong></span>
+                            <span>Deployments: <strong class="text-brand-textDark">900</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">The essence of design lies in "knowing when to stop." This minimalist space, optimized specifically for mobile VR devices, boldly strips away excess decoration. Polycount is compressed to one-fifth of the original, channeling resources into high-precision, zero-latency lighting feedback — proving that high-quality user experiences are achievable even under severe hardware constraints.</p>
+                    </div>
+                </div>
+
+                <!-- Smart Dorm 4 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
+                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
+                        <img src="assets/images/smart-dorm-4.jpg" alt="Smart Dorm 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:col-span-5 space-y-4">
+                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 4: Modular Adaptability & Next-Gen Multi-Function</h4>
+                        <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
+                            <span>Earned: <strong class="text-brand-textDark">₳ 311,000</strong></span>
+                            <span>Deployments: <strong class="text-brand-textDark">450</strong></span>
+                        </div>
+                        <p class="text-sm text-brand-textSecondary leading-relaxed">As the culminating work of this series, Smart Dorm 4 explores the concept of "Modular Assembly." Users can freely adjust the coordinates of each functional unit (bathroom, workspace, media library) within the dormitory. The underlying programming automatically switches local network signal broadcast direction based on unit position, achieving high spatial adaptability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROOM CREATION -->
+        <section id="room-section" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-brand-border pb-4">
+                <h3 class="text-2xl font-bold text-brand-textDark">Room Creation</h3>
+                <p class="text-brand-textSecondary text-sm mt-1">Breaking beyond Invention micro-creation limits to craft complete large-scale immersive virtual social spaces.</p>
+            </div>
+            <div class="bg-brand-grayBg rounded-3xl border border-brand-border overflow-hidden">
+                <div class="w-full aspect-video overflow-hidden border-b border-brand-border">
+                    <iframe class="lazy-video w-full h-full" data-src="https://www.youtube.com/embed/D1KWhUiG-YI?autoplay=1&mute=1&loop=1&playlist=D1KWhUiG-YI&enablejsapi=1" title="MasterBartender Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-8 space-y-4">
+                    <div>
+                        <h4 class="text-2xl font-bold text-brand-textDark">Room: ^MasterBartender</h4>
+                        <p class="text-xs text-brand-textSecondary font-bold mt-1">Interaction: <span class="text-brand-orange">Multiplayer Online Physics Bartending Simulation</span> | Global Visitors: 4,200+</p>
+                    </div>
+                    <p class="text-sm text-brand-textSecondary leading-relaxed">"MasterBartender" is an immersive spatial proposal for virtual bar social scenarios. The design abandons traditional game panel-menu interactions in favor of highly physicalized gesture-based interaction. Players can physically grab cups at the bar, pour different chemical physics particles (simulating various cocktails), and trigger the Circuits V2 particle accelerometer through hand-shaking events to mix customized luminous liquids. This perfectly demonstrates the heights achievable when visual aesthetics, acoustic dynamics, and network variable synchronization are fused into a high-fluency virtual theater.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2.5 py-1 bg-white border border-brand-border text-[11px] font-bold text-brand-textSecondary rounded-lg">Hand Gesture Collision Capture</span>
+                        <span class="px-2.5 py-1 bg-white border border-brand-border text-[11px] font-bold text-brand-textSecondary rounded-lg">Dynamic Fluid Particle Mixing</span>
+                        <span class="px-2.5 py-1 bg-white border border-brand-border text-[11px] font-bold text-brand-textSecondary rounded-lg">Low-Poly Bar Atmosphere Rendering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CREATION METHOD -->
+        <section id="method-section" class="space-y-8 scroll-mt-24">
+            <div class="border-b border-brand-border pb-4">
+                <h3 class="text-2xl font-bold text-brand-textDark">Creation Methodology</h3>
+                <p class="text-brand-textSecondary text-sm mt-1">Analyzing how Rec Room's core spatial builder Maker Pen enables system development at the intersection of technology and design.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 rounded-2xl bg-brand-grayBg border border-brand-border space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange">
+                        <i data-lucide="box" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-textDark">3D Spatial Modeling</h4>
+                    <p class="text-xs text-brand-textSecondary leading-relaxed">Using the Maker Pen tool in 3D virtual environments, we can directly perform immersive modeling. Design primarily involves Boolean operations and proportional adjustments of primitive geometries (cubes, cylinders, spheres). To achieve barrier-free cross-platform experiences for mobile VR and PC, I focus intensely on optimizing the balance between vertex counts and lightmapping. Every Smart Dorm wall panel and MasterBartender bar corner is aligned at micrometer-level coordinates, combining sculptural aesthetics with system computational tolerance.</p>
+                    <div class="text-[10px] text-brand-orange font-bold font-mono">CORE: low-poly geometry & mesh efficiency</div>
+                </div>
+                <div class="p-6 rounded-2xl bg-brand-grayBg border border-brand-border space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange">
+                        <i data-lucide="binary" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-brand-textDark">Event-Driven Circuit Logic (Circuits V2)</h4>
+                    <p class="text-xs text-brand-textSecondary leading-relaxed">"Dynamics" are what give spaces life. Using the platform's underlying visual scripting language Circuits V2, I wire intricate logic control networks within 3D space. Through event listeners, asynchronous timer synchronization, and network-cached memory variables, all physical furniture is translated into "State-Synchronized Entities" — enabling multiple users operating the same bartending shaker or hidden bed within the same space to receive millisecond-level, zero-latency real-time feedback.</p>
+                    <div class="text-[10px] text-brand-orange font-bold font-mono">CORE: event-driven callbacks & sync algorithms</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-brand-border bg-brand-grayBg py-12 px-6 mt-20">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center text-white font-black text-sm">R</div>
+                <div>
+                    <span class="font-extrabold text-sm text-brand-textDark uppercase">Rec Room UGC Portfolio</span>
+                    <span class="text-[10px] text-brand-textSecondary block uppercase font-bold tracking-wider">Spatial Computing & Interactive Systems</span>
+                </div>
+            </div>
+            <p class="text-xs text-brand-textSecondary font-semibold">© 2026 CY Virtual Space Interactive Design Portfolio. Universal Design Application.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            lucide.createIcons();
+            document.getElementById('menu-toggle').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
+
+            // Video management: lazy-load, play on scroll, only one active at a time
+            const videos = document.querySelectorAll('.lazy-video');
+            let activeVideo = null;
+
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const iframe = entry.target;
+                    if (entry.isIntersecting) {
+                        // Pause the previously active video
+                        if (activeVideo && activeVideo !== iframe) {
+                            activeVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        }
+                        // Load or play this video
+                        if (!iframe.src) {
+                            iframe.src = iframe.dataset.src;
+                        } else {
+                            iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                        }
+                        activeVideo = iframe;
+                    } else {
+                        // Pause when leaving viewport
+                        if (iframe.src) {
+                            iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        }
+                        if (activeVideo === iframe) {
+                            activeVideo = null;
+                        }
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            videos.forEach(video => videoObserver.observe(video));
+        };
+    </script>
+</body>
+</html>
