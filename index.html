@@ -419,7 +419,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="rounded-2xl bg-brand-grayBg border border-brand-border overflow-hidden">
                     <div class="aspect-[9/16] max-h-[480px] mx-auto">
-                        <iframe class="lazy-video w-full h-full" data-src="https://www.youtube.com/embed/k09aLwcb8rM?autoplay=1&mute=1&loop=1&playlist=k09aLwcb8rM&enablejsapi=1" title="3D Modeling Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="lazy-video paired-video w-full h-full" data-src="https://www.youtube.com/embed/k09aLwcb8rM?autoplay=1&mute=1&loop=1&playlist=k09aLwcb8rM&enablejsapi=1" title="3D Modeling Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="p-6 space-y-3">
                         <div class="flex items-center gap-3">
@@ -436,7 +436,7 @@
                 </div>
                 <div class="rounded-2xl bg-brand-grayBg border border-brand-border overflow-hidden">
                     <div class="aspect-[9/16] max-h-[480px] mx-auto">
-                        <iframe class="lazy-video w-full h-full" data-src="https://www.youtube.com/embed/TywWhSFRnVQ?autoplay=1&mute=1&loop=1&playlist=TywWhSFRnVQ&enablejsapi=1" title="Circuits V2 Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="lazy-video paired-video w-full h-full" data-src="https://www.youtube.com/embed/TywWhSFRnVQ?autoplay=1&mute=1&loop=1&playlist=TywWhSFRnVQ&enablejsapi=1" title="Circuits V2 Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="p-6 space-y-3">
                         <div class="flex items-center gap-3">
@@ -490,8 +490,9 @@
             const videoObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const iframe = entry.target;
+                    const isPaired = iframe.classList.contains('paired-video');
                     if (entry.isIntersecting) {
-                        if (activeVideo && activeVideo !== iframe) {
+                        if (!isPaired && activeVideo && activeVideo !== iframe && !activeVideo.classList.contains('paired-video')) {
                             activeVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
                         }
                         if (!iframe.src) {
@@ -499,7 +500,9 @@
                         } else {
                             iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
                         }
-                        activeVideo = iframe;
+                        if (!isPaired) {
+                            activeVideo = iframe;
+                        }
                     } else {
                         if (iframe.src) {
                             iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
