@@ -247,14 +247,18 @@
                         <div class="relative bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video shadow-sm">
                             <!-- Slides -->
                             <div class="carousel-track flex transition-transform duration-500 ease-in-out h-full" data-carousel="sd1">
-                                <div class="carousel-slide min-w-full h-full">
-                                    <img src="assets/images/smart-dorm.jpg" alt="Smart Dorm overview" class="w-full h-full object-cover">
+                                <div class="carousel-slide min-w-full h-full" data-type="image" data-duration="4000">
+                                    <img src="assets/images/smart-dorm/smart-dorm-i1.jpg" alt="Smart Dorm overview" class="w-full h-full object-cover">
                                 </div>
-                                <div class="carousel-slide min-w-full h-full">
-                                    <img src="assets/images/smart-dorm.jpg" alt="Smart Dorm mechanism" class="w-full h-full object-cover">
+                                <div class="carousel-slide min-w-full h-full" data-type="video" data-loops="2">
+                                    <video muted playsinline class="w-full h-full object-cover">
+                                        <source src="assets/images/smart-dorm/smart-dorm-i2.mp4" type="video/mp4">
+                                    </video>
                                 </div>
-                                <div class="carousel-slide min-w-full h-full">
-                                    <img src="assets/images/smart-dorm.jpg" alt="Smart Dorm interior" class="w-full h-full object-cover">
+                                <div class="carousel-slide min-w-full h-full" data-type="video" data-loops="2">
+                                    <video muted playsinline class="w-full h-full object-cover">
+                                        <source src="assets/images/smart-dorm/smart-dorm-i3.mp4" type="video/mp4">
+                                    </video>
                                 </div>
                             </div>
                             <!-- Navigation Arrows -->
@@ -272,7 +276,7 @@
                             </div>
                         </div>
                         <!-- Slide Caption -->
-                        <p class="carousel-caption text-xs text-brand-textSecondary font-semibold text-center px-2" data-carousel="sd1">Overview of the Smart Dorm space layout and transforming mechanisms</p>
+                        <p class="carousel-caption text-xs text-brand-textSecondary font-semibold text-center px-2" data-carousel="sd1"></p>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
                         <h4 class="text-lg font-bold text-brand-textDark">
@@ -297,8 +301,47 @@
 
                 <!-- Smart Dorm 2 -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
-                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
-                        <img src="assets/images/smart-dorm-2.jpg" alt="Smart Dorm 2" class="w-full h-full object-cover">
+                    <!-- Carousel -->
+                    <div class="lg:col-span-7 space-y-3">
+                        <div class="relative bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video shadow-sm">
+                            <div class="carousel-track flex transition-transform duration-500 ease-in-out h-full" data-carousel="sd2">
+                                <div class="carousel-slide min-w-full h-full" data-type="image" data-duration="4000">
+                                    <img src="assets/images/smart-dorm-2/smart-dorm-2-i1.jpg" alt="Smart Dorm 2" class="w-full h-full object-cover">
+                                </div>
+                                <div class="carousel-slide min-w-full h-full" data-type="image" data-duration="4000">
+                                    <img src="assets/images/smart-dorm-2/smart-dorm-2-i2.jpg" alt="Smart Dorm 2" class="w-full h-full object-cover">
+                                </div>
+                                <div class="carousel-slide min-w-full h-full" data-type="video" data-loops="1">
+                                    <video muted playsinline class="w-full h-full object-cover">
+                                        <source src="assets/images/smart-dorm-2/smart-dorm-2-i3.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="carousel-slide min-w-full h-full" data-type="video" data-loops="1">
+                                    <video muted playsinline class="w-full h-full object-cover">
+                                        <source src="assets/images/smart-dorm-2/smart-dorm-2-i4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="carousel-slide min-w-full h-full" data-type="image" data-duration="4000">
+                                    <img src="assets/images/smart-dorm-2/smart-dorm-2-i5.jpg" alt="Smart Dorm 2" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <!-- Navigation Arrows -->
+                            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-brand-border flex items-center justify-center hover:bg-white transition-colors shadow-sm" data-carousel="sd2">
+                                <i data-lucide="chevron-left" class="w-4 h-4 text-brand-textDark"></i>
+                            </button>
+                            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-brand-border flex items-center justify-center hover:bg-white transition-colors shadow-sm" data-carousel="sd2">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textDark"></i>
+                            </button>
+                            <!-- Dots -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5">
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white border border-brand-border transition-colors" data-carousel="sd2" data-index="0"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 border border-brand-border transition-colors" data-carousel="sd2" data-index="1"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 border border-brand-border transition-colors" data-carousel="sd2" data-index="2"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 border border-brand-border transition-colors" data-carousel="sd2" data-index="3"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 border border-brand-border transition-colors" data-carousel="sd2" data-index="4"></button>
+                            </div>
+                        </div>
+                        <p class="carousel-caption text-xs text-brand-textSecondary font-semibold text-center px-2" data-carousel="sd2"></p>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
                         <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 2: Minimalist Aesthetic & Sleek Mechanics</h4>
@@ -318,8 +361,41 @@
 
                 <!-- Smart Dorm 3 -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-12 border-t border-brand-border">
-                    <div class="lg:col-span-7 bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video relative shadow-sm">
-                        <img src="assets/images/smart-dorm-3.jpg" alt="Smart Dorm 3" class="w-full h-full object-cover">
+                    <!-- Carousel -->
+                    <div class="lg:col-span-7 space-y-3">
+                        <div class="relative bg-brand-grayBg rounded-2xl overflow-hidden border border-brand-border aspect-video shadow-sm">
+                            <div class="carousel-track flex transition-transform duration-500 ease-in-out h-full" data-carousel="sd3">
+                                <div class="carousel-slide min-w-full h-full" data-type="image" data-duration="4000">
+                                    <img src="assets/images/smart-dorm-3/smart-dorm-3-i1.jpg" alt="Smart Dorm 3" class="w-full h-full object-cover">
+                                </div>
+                                <div class="carousel-slide min-w-full h-full" data-type="video" data-loops="1">
+                                    <video muted playsinline class="w-full h-full object-cover">
+                                        <source src="assets/images/smart-dorm-3/smart-dorm-3-i2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="carousel-slide min-w-full h-full" data-type="image" data-duration="4000">
+                                    <img src="assets/images/smart-dorm-3/smart-dorm-3-i3.jpg" alt="Smart Dorm 3" class="w-full h-full object-cover">
+                                </div>
+                                <div class="carousel-slide min-w-full h-full" data-type="image" data-duration="4000">
+                                    <img src="assets/images/smart-dorm-3/smart-dorm-3-i4.jpg" alt="Smart Dorm 3" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <!-- Navigation Arrows -->
+                            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-brand-border flex items-center justify-center hover:bg-white transition-colors shadow-sm" data-carousel="sd3">
+                                <i data-lucide="chevron-left" class="w-4 h-4 text-brand-textDark"></i>
+                            </button>
+                            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm border border-brand-border flex items-center justify-center hover:bg-white transition-colors shadow-sm" data-carousel="sd3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-brand-textDark"></i>
+                            </button>
+                            <!-- Dots -->
+                            <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5">
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white border border-brand-border transition-colors" data-carousel="sd3" data-index="0"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 border border-brand-border transition-colors" data-carousel="sd3" data-index="1"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 border border-brand-border transition-colors" data-carousel="sd3" data-index="2"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full bg-white/50 border border-brand-border transition-colors" data-carousel="sd3" data-index="3"></button>
+                            </div>
+                        </div>
+                        <p class="carousel-caption text-xs text-brand-textSecondary font-semibold text-center px-2" data-carousel="sd3"></p>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
                         <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 3: Exploring Expansive Spatial Design</h4>
@@ -519,25 +595,68 @@
 
             videos.forEach(video => videoObserver.observe(video));
 
-            // Carousel logic
+            // Carousel logic (supports mixed image/video slides)
             const carousels = {};
             const captions = {
-                sd1: [
-                    "Overview of the Smart Dorm space layout and transforming mechanisms",
-                    "Button-activated transforming bed and wall-deployed TV system",
-                    "Retractable hidden stairs and space-saving interior design"
-                ]
+                sd1: ["", "", ""],
+                sd2: ["", "", "", "", ""],
+                sd3: ["", "", "", ""]
             };
 
             document.querySelectorAll('.carousel-track').forEach(track => {
                 const id = track.dataset.carousel;
                 const slides = track.querySelectorAll('.carousel-slide');
-                carousels[id] = { track, slides, current: 0 };
+                carousels[id] = { track, slides, current: 0, timer: null, loopCount: 0 };
             });
+
+            function stopCurrentSlide(id) {
+                const c = carousels[id];
+                if (c.timer) { clearTimeout(c.timer); c.timer = null; }
+                const slide = c.slides[c.current];
+                const video = slide.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                    video.removeEventListener('ended', video._onEnded);
+                }
+            }
+
+            function playCurrentSlide(id) {
+                const c = carousels[id];
+                const slide = c.slides[c.current];
+                const type = slide.dataset.type;
+
+                if (type === 'video') {
+                    const video = slide.querySelector('video');
+                    const maxLoops = parseInt(slide.dataset.loops) || 2;
+                    c.loopCount = 0;
+                    video.currentTime = 0;
+                    video.play();
+
+                    video._onEnded = function () {
+                        c.loopCount++;
+                        if (c.loopCount < maxLoops) {
+                            video.currentTime = 0;
+                            video.play();
+                        } else {
+                            goToSlide(id, c.current + 1);
+                        }
+                    };
+                    video.addEventListener('ended', video._onEnded);
+                } else {
+                    // Image: wait for specified duration then advance
+                    const duration = parseInt(slide.dataset.duration) || 4000;
+                    c.timer = setTimeout(() => {
+                        goToSlide(id, c.current + 1);
+                    }, duration);
+                }
+            }
 
             function goToSlide(id, index) {
                 const c = carousels[id];
                 if (!c) return;
+                stopCurrentSlide(id);
+
                 const total = c.slides.length;
                 c.current = ((index % total) + total) % total;
                 c.track.style.transform = `translateX(-${c.current * 100}%)`;
@@ -553,6 +672,8 @@
                 if (caption && captions[id]) {
                     caption.textContent = captions[id][c.current] || '';
                 }
+
+                playCurrentSlide(id);
             }
 
             document.querySelectorAll('.carousel-prev').forEach(btn => {
@@ -575,11 +696,9 @@
                 });
             });
 
-            // Auto-play carousels every 4 seconds
+            // Start all carousels
             Object.keys(carousels).forEach(id => {
-                setInterval(() => {
-                    goToSlide(id, carousels[id].current + 1);
-                }, 4000);
+                playCurrentSlide(id);
             });
         };
     </script>
