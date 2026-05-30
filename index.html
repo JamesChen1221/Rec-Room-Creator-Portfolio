@@ -59,7 +59,7 @@
     <nav class="sticky top-0 z-50 w-full bg-white/90 border-b border-brand-border py-3 px-4 sm:px-6 backdrop-blur-md shadow-sm">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
-                <span class="font-extrabold text-sm sm:text-base tracking-wider text-brand-textDark uppercase">Rec Room Portfolio</span>
+                <span class="font-extrabold text-sm sm:text-base tracking-wider text-brand-textDark uppercase" data-i18n="nav_title">Rec Room Portfolio</span>
                 <span class="hidden lg:inline text-xs text-brand-textSecondary border-l border-brand-border pl-3" data-i18n="nav_subtitle">Digital Content Creation</span>
             </div>
 
@@ -69,7 +69,7 @@
                 <a href="#stats-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_stats">Stats</a>
                 <a href="#dorm-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_dorm">Smart Dorm</a>
                 <a href="#room-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_room">Room Creation</a>
-                <a href="#method-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_method">Creation Process</a>
+                <a href="#method-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_method">Creation Method</a>
                 <!-- Language Toggle -->
                 <button id="lang-toggle" class="ml-1 px-2.5 py-1 rounded-md border border-brand-border text-sm font-bold text-brand-textSecondary hover:bg-brand-grayBg hover:text-brand-orange transition-colors" aria-label="Switch language">中文</button>
             </div>
@@ -90,7 +90,7 @@
                 <a href="#stats-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_stats">Stats</a>
                 <a href="#dorm-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_dorm">Smart Dorm</a>
                 <a href="#room-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_room">Room Creation</a>
-                <a href="#method-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_method">Creation Process</a>
+                <a href="#method-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_method">Creation Method</a>
             </div>
         </div>
     </nav>
@@ -696,6 +696,7 @@
         // i18n translations
         const translations = {
             zh: {
+                nav_title: 'Rec Room 作品集',
                 nav_subtitle: '數位內容創作',
                 nav_overview: '概覽',
                 nav_stats: '數據',
@@ -718,7 +719,7 @@
                 stats_invention_title: '商品數據',
                 stats_th_invention: '商品',
                 stats_th_earned: '獲得代幣',
-                stats_th_purchases: '購買數',
+                stats_th_purchases: '銷售量',
                 stats_room_title: '房間',
                 stats_room_desc: '這個房間是一個社交空間，包含一個靈感來自經典遊戲「Root Beer Tapper」的遊戲。',
                 stats_room_visits_label: '造訪次數',
@@ -748,7 +749,7 @@
                 method_circuit_desc: '在 Rec Room 內編寫電路邏輯的簡易示範，展示了觸控啟動變色窗戶的開發過程。',
                 footer_subtitle: '數位內容創作',
                 label_earned: '獲得：',
-                label_purchases: '購買：'
+                label_purchases: '銷售量：'
             }
         };
 
