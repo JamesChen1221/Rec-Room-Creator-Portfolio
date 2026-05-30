@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -58,34 +58,39 @@
     <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 w-full bg-white/90 border-b border-brand-border py-3 px-4 sm:px-6 backdrop-blur-md shadow-sm">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-2 sm:space-x-3">
+            <div class="flex items-center space-x-2 sm:space-x-3 shrink-0">
                 <span class="font-extrabold text-sm sm:text-base tracking-wider text-brand-textDark uppercase">Rec Room Portfolio</span>
-                <span class="hidden sm:inline text-xs text-brand-textSecondary border-l border-brand-border pl-3">Digital Content Creator & Community Manager</span>
+                <span class="hidden lg:inline text-xs text-brand-textSecondary border-l border-brand-border pl-3" data-i18n="nav_subtitle">Digital Content Creations</span>
             </div>
 
             <!-- Desktop Nav -->
-            <div class="hidden md:flex items-center space-x-3 text-xs sm:text-sm font-semibold text-brand-textSecondary">
-                <a href="#intro-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Overview</a>
-                <a href="#stats-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Stats</a>
-                <a href="#dorm-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Smart Dorm</a>
-                <a href="#room-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Room Creation</a>
-                <a href="#method-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Creation Process</a>
+            <div class="hidden md:flex items-center space-x-3 text-sm font-semibold text-brand-textSecondary whitespace-nowrap">
+                <a href="#intro-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_overview">Overview</a>
+                <a href="#stats-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_stats">Stats</a>
+                <a href="#dorm-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_dorm">Smart Dorm</a>
+                <a href="#room-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_room">Room Creation</a>
+                <a href="#method-section" class="nav-link px-2 py-1 rounded-md hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_method">Creation Process</a>
+                <!-- Language Toggle -->
+                <button id="lang-toggle" class="ml-1 px-2.5 py-1 rounded-md border border-brand-border text-sm font-bold text-brand-textSecondary hover:bg-brand-grayBg hover:text-brand-orange transition-colors" aria-label="Switch language">中文</button>
             </div>
 
             <!-- Mobile Hamburger -->
-            <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-brand-grayBg transition-colors" aria-label="Toggle menu">
-                <i data-lucide="menu" class="w-5 h-5 text-brand-textDark"></i>
-            </button>
+            <div class="flex md:hidden items-center space-x-1">
+                <button id="lang-toggle-mobile" class="p-2 rounded-lg hover:bg-brand-grayBg transition-colors text-xs font-bold text-brand-textSecondary" aria-label="Switch language">中文</button>
+                <button id="menu-toggle" class="p-2 rounded-lg hover:bg-brand-grayBg transition-colors" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-5 h-5 text-brand-textDark"></i>
+                </button>
+            </div>
         </div>
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden max-w-5xl mx-auto pt-3 pb-1">
             <div class="flex flex-col space-y-1 text-sm font-semibold text-brand-textSecondary">
-                <a href="#intro-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Overview</a>
-                <a href="#stats-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Stats</a>
-                <a href="#dorm-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Smart Dorm</a>
-                <a href="#room-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Room Creation</a>
-                <a href="#method-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors">Creation Process</a>
+                <a href="#intro-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_overview">Overview</a>
+                <a href="#stats-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_stats">Stats</a>
+                <a href="#dorm-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_dorm">Smart Dorm</a>
+                <a href="#room-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_room">Room Creation</a>
+                <a href="#method-section" class="nav-link px-3 py-2 rounded-lg hover:bg-brand-grayBg hover:text-brand-orange transition-colors" data-i18n="nav_method">Creation Process</a>
             </div>
         </div>
     </nav>
@@ -102,10 +107,10 @@
                 <img src="assets/images/avatar.jpg" alt="Creator avatar" class="w-full h-full object-cover">
             </div>
             <div class="mt-6 lg:mt-4 text-center lg:text-left space-y-3 bg-white/70 backdrop-blur-sm rounded-2xl p-6">
-                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-textDark">
+                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-textDark" data-i18n="header_title">
                     Virtual Reality Digital Creation: 3D Modeling & Systems Programming Portfolio
                 </h1>
-                <p class="text-sm sm:text-base text-brand-textSecondary font-medium max-w-2xl leading-relaxed">
+                <p class="text-sm sm:text-base text-brand-textSecondary font-medium max-w-2xl leading-relaxed" data-i18n-html="header_desc">
                     This portfolio showcases various creations I developed on the virtual reality 
                     platform Rec Room. Using the built-in creation tool, Maker Pen, I designed 3D 
                     models, developed circuit-based logic systems, and created Dorm Rooms featuring 
@@ -122,10 +127,10 @@
         <!-- INTRO -->
 
         <section id="intro-section" class="space-y-4 border-l-4 border-brand-orange pl-6 py-2 scroll-mt-24">
-            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">
+            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider" data-i18n="intro_title">
                 Project Classifications
             </h2>
-            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium">
+            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium" data-i18n-html="intro_desc">
                 My portfolio primarily centers on Dorm Room Design&mdash;the default entry environment for 
                 users on the Rec Room platform. In this space, I specialize in crafting builds that 
                 seamlessly balance aesthetic appeal, spatial efficiency, and engaging interactive 
@@ -136,10 +141,10 @@
         </section>
 
         <section id="journey-section" class="space-y-4 border-l-4 border-brand-orange pl-6 py-2 scroll-mt-24">
-            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">
+            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider" data-i18n="journey_title">
                 Creation Journey
             </h2>
-            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium">
+            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium" data-i18n-html="journey_desc">
                 I joined Rec Room as a player in 2021, but it didn't take long to discover the joy 
                 of unconstrained creation. I have always loved dreaming up eccentric, innovative 
                 concepts, and this platform suddenly provided the perfect canvas to bring my 
@@ -155,10 +160,10 @@
         </section>
 
         <section id="philosophy-section" class="space-y-4 border-l-4 border-brand-orange pl-6 py-2 scroll-mt-24">
-            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">
+            <h2 class="text-lg font-bold text-brand-textDark uppercase tracking-wider" data-i18n="philosophy_title">
                 Design Philosophy
             </h2>
-            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium">
+            <p class="text-brand-textSecondary text-sm sm:text-base leading-relaxed font-medium" data-i18n-html="philosophy_desc">
                 My approach centers on maximizing creativity within limited space and resources by 
                 leveraging clever constraints and the right tools. While many creators strive for 
                 hyper-realism and intricate details, I lean toward a minimalist aesthetic infused 
@@ -171,21 +176,21 @@
 
         <!-- STATS -->
         <section id="stats-section" class="space-y-8 scroll-mt-24">
-            <h3 class="text-lg font-bold text-brand-textDark uppercase tracking-wider">Stats</h3>
+            <h3 class="text-lg font-bold text-brand-textDark uppercase tracking-wider" data-i18n="stats_title">Stats</h3>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
-                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider">Total Earned Tokens</span>
+                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider" data-i18n="stats_tokens_label">Total Earned Tokens</span>
                     <div class="text-2xl font-extrabold text-brand-textDark mt-1"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-6 h-6 align-middle"> 16M+</div>
-                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1">
+                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1" data-i18n="stats_tokens_desc">
                         Demonstrates high market appeal and design fluency, having ranked among 
                         the Top 100 Sellers of the Year.
                     </p>
                 </div>
                 <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
-                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider">Subscribers</span>
+                    <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider" data-i18n="stats_subs_label">Subscribers</span>
                     <div class="text-2xl font-extrabold text-brand-textDark mt-1">7.7k+</div>
-                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1">
+                    <p class="text-[10px] text-brand-textSecondary font-semibold mt-1" data-i18n="stats_subs_desc">
                         Successfully grew and managed a subscriber base to 7.7K+ by delivering 
                         high-quality, interactive virtual spaces.
                     </p>
@@ -195,15 +200,15 @@
             <!-- Inventions Table & Room Creation -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 <div class="lg:col-span-8 space-y-4">
-                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider">Invention Statistics</h4>
+                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider" data-i18n="stats_invention_title">Invention Statistics</h4>
                     <div class="bg-white rounded-2xl border border-brand-border overflow-hidden">
                         <div class="overflow-x-auto">
                             <table class="w-full text-left text-sm border-collapse">
                                 <thead>
                                     <tr class="bg-brand-grayBg border-b border-brand-border text-brand-textSecondary font-bold text-xs uppercase tracking-wide">
-                                        <th class="p-4">Invention</th>
-                                        <th class="p-4 text-right">Earned Tokens</th>
-                                        <th class="p-4 text-right">Purchases</th>
+                                        <th class="p-4" data-i18n="stats_th_invention">Invention</th>
+                                        <th class="p-4 text-right" data-i18n="stats_th_earned">Earned Tokens</th>
+                                        <th class="p-4 text-right" data-i18n="stats_th_purchases">Purchases</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-brand-border text-brand-textDark font-medium">
@@ -265,21 +270,21 @@
 
                 <!-- Right Column: Room Creation -->
                 <div class="lg:col-span-4 space-y-4 flex flex-col">
-                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider">Room</h4>
+                    <h4 class="text-sm font-bold text-brand-textSecondary uppercase tracking-wider" data-i18n="stats_room_title">Room</h4>
                     <div class="bg-brand-grayBg rounded-2xl border border-brand-border p-6 flex flex-col justify-between flex-1 space-y-4">
                         <div class="space-y-3">
                             <h5 class="text-lg font-bold text-brand-textDark">MasterBartender</h5>
                             <div class="w-full aspect-[16/10] rounded-xl bg-indigo-50 border border-indigo-100 overflow-hidden shadow-sm my-3">
                                 <img src="assets/images/master-bartender.jpg" alt="MasterBartender" class="w-full h-full object-cover">
                             </div>
-                            <p class="text-xs text-brand-textSecondary font-semibold leading-relaxed">
+                            <p class="text-xs text-brand-textSecondary font-semibold leading-relaxed" data-i18n="stats_room_desc">
                                 This room is a hangout place that includes a main game inspired by the classic game 
                                 "Root Beer Tapper".
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border flex justify-between items-center">
-                            <span class="text-xs font-bold text-brand-textSecondary">Room Visits</span>
-                            <span class="text-xs font-extrabold text-indigo-700 bg-indigo-50 border border-indigo-100 px-3 py-1.5 rounded-lg font-mono">1,400+ visitors</span>
+                            <span class="text-xs font-bold text-brand-textSecondary" data-i18n="stats_room_visits_label">Room Visits</span>
+                            <span class="text-xs font-extrabold text-indigo-700 bg-indigo-50 border border-indigo-100 px-3 py-1.5 rounded-lg font-mono" data-i18n="stats_room_visits_value">1,400+ visitors</span>
                         </div>
                     </div>
                 </div>
@@ -289,8 +294,8 @@
         <!-- SMART DORM SERIES -->
         <section id="dorm-section" class="space-y-12 scroll-mt-24">
             <div class="border-b border-brand-border pb-4">
-                <h3 class="text-2xl font-bold text-brand-textDark tracking-tight">Smart Dorm &mdash; Intelligent Interactive Dormitory Series</h3>
-                <p class="text-brand-textSecondary text-sm mt-1">Exploring highly functional automated geometric transformations within severely constrained spatial budgets.</p>
+                <h3 class="text-2xl font-bold text-brand-textDark tracking-tight" data-i18n-html="dorm_title">Smart Dorm &mdash; Intelligent Interactive Dormitory Series</h3>
+                <p class="text-brand-textSecondary text-sm mt-1" data-i18n="dorm_subtitle">Exploring highly functional spatial design within severely constrained spaces.</p>
             </div>
 
             <div class="space-y-16">
@@ -330,14 +335,14 @@
                         </div>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
-                        <h4 class="text-lg font-bold text-brand-textDark">
+                        <h4 class="text-lg font-bold text-brand-textDark" data-i18n="sd1_title">
                             Smart Dorm: The Starting Point of My Creator Journey in Rec Room
                         </h4>
                         <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
-                            <span>Earned: <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 1,571,500</strong></span>
-                            <span>Purchases: <strong class="text-brand-textDark">2,245</strong></span>
+                            <span><span data-i18n="label_earned">Earned:</span> <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 1,571,500</strong></span>
+                            <span><span data-i18n="label_purchases">Purchases:</span> <strong class="text-brand-textDark">2,245</strong></span>
                         </div>
-                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                        <p class="text-sm text-brand-textSecondary leading-relaxed" data-i18n-html="sd1_desc">
                             As my first commercial release in Rec Room, this project explores spatial 
                             optimization and interactive design. I engineered the dorm with dynamic, 
                             space-saving mechanisms: a button-activated transforming bed, a wall-deployed 
@@ -394,12 +399,12 @@
                         </div>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
-                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 2: Minimalist Aesthetic & Sleek Mechanics</h4>
+                        <h4 class="text-lg font-bold text-brand-textDark" data-i18n="sd2_title">Smart Dorm 2: Minimalist Aesthetic & Sleek Mechanics</h4>
                         <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
-                            <span>Earned: <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 7,840,000</strong></span>
-                            <span>Purchases: <strong class="text-brand-textDark">5,600</strong></span>
+                            <span><span data-i18n="label_earned">Earned:</span> <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 7,840,000</strong></span>
+                            <span><span data-i18n="label_purchases">Purchases:</span> <strong class="text-brand-textDark">5,600</strong></span>
                         </div>
-                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                        <p class="text-sm text-brand-textSecondary leading-relaxed" data-i18n="sd2_desc">
                             Leveraging my experience from the first project, I designed a second generation featuring 
                             a minimalist, modern aesthetic and a more seamless user experience. I introduced innovative 
                             mechanics to deliver a unique spatial experience, such as color-changing windows and an 
@@ -447,12 +452,12 @@
                         </div>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
-                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 3: Exploring Expansive Spatial Design</h4>
+                        <h4 class="text-lg font-bold text-brand-textDark" data-i18n="sd3_title">Smart Dorm 3: Exploring Expansive Spatial Design</h4>
                         <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
-                            <span>Earned: <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 4,683,350</strong></span>
-                            <span>Purchases: <strong class="text-brand-textDark">5,589</strong></span>
+                            <span><span data-i18n="label_earned">Earned:</span> <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 4,683,350</strong></span>
+                            <span><span data-i18n="label_purchases">Purchases:</span> <strong class="text-brand-textDark">5,589</strong></span>
                         </div>
-                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                        <p class="text-sm text-brand-textSecondary leading-relaxed" data-i18n="sd3_desc">
                             Inspired by the futuristic luxury mansion in the movie Incredibles 2, this project was my 
                             first venture into designing expansive visual spaces. The highlight of this dorm is a 
                             custom-engineered indoor waterfall, seamlessly integrated alongside a new suite of smart 
@@ -467,12 +472,12 @@
                         <iframe class="lazy-video w-full h-full" data-src="https://www.youtube.com/embed/zvzsOmHBCo0?autoplay=1&mute=1&loop=1&playlist=zvzsOmHBCo0&enablejsapi=1" title="sDorm Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
-                        <h4 class="text-lg font-bold text-brand-textDark">sDorm: Launching a Next-Generation Smart Dorm</h4>
+                        <h4 class="text-lg font-bold text-brand-textDark" data-i18n="sdorm_title">sDorm: Launching a Next-Generation Smart Dorm</h4>
                         <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
-                            <span>Earned: <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 1,567,650</strong></span>
-                            <span>Purchases: <strong class="text-brand-textDark">900</strong></span>
+                            <span><span data-i18n="label_earned">Earned:</span> <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 1,567,650</strong></span>
+                            <span><span data-i18n="label_purchases">Purchases:</span> <strong class="text-brand-textDark">900</strong></span>
                         </div>
-                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                        <p class="text-sm text-brand-textSecondary leading-relaxed" data-i18n-html="sdorm_desc">
                             Serving as a masterclass of my technical expertise, this project integrates all my proven 
                             methods&mdash;including transformable interiors&mdash;into a brand-new series. The technical 
                             breakthrough of this build is a fully functional bus system, engineered through complex 
@@ -559,12 +564,12 @@
                         </div>
                     </div>
                     <div class="lg:col-span-5 space-y-4">
-                        <h4 class="text-lg font-bold text-brand-textDark">Smart Dorm 4: Elevated Aesthetics & Immersive Systems</h4>
+                        <h4 class="text-lg font-bold text-brand-textDark" data-i18n="sd4_title">Smart Dorm 4: Elevated Aesthetics & Immersive Systems</h4>
                         <div class="flex gap-4 text-xs text-brand-textSecondary font-semibold">
-                            <span>Earned: <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 311,000</strong></span>
-                            <span>Purchases: <strong class="text-brand-textDark">450</strong></span>
+                            <span><span data-i18n="label_earned">Earned:</span> <strong class="text-brand-textDark"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-3.5 h-3.5 align-middle"> 311,000</strong></span>
+                            <span><span data-i18n="label_purchases">Purchases:</span> <strong class="text-brand-textDark">450</strong></span>
                         </div>
-                        <p class="text-sm text-brand-textSecondary leading-relaxed">
+                        <p class="text-sm text-brand-textSecondary leading-relaxed" data-i18n="sd4_desc">
                             For this iteration, I merged advanced mechanics with a more sophisticated, stylish aesthetic 
                             to elevate the visual design. The core highlights of this project introduce engaging gameplay 
                             and systemic automation: a precision-engineered paper-tossing mini-game and a futuristic 
@@ -578,8 +583,8 @@
         <!-- ROOM CREATION -->
         <section id="room-section" class="space-y-8 scroll-mt-24">
             <div class="border-b border-brand-border pb-4">
-                <h3 class="text-2xl font-bold text-brand-textDark">Room Creation</h3>
-                <p class="text-brand-textSecondary text-sm mt-1">Breaking beyond Invention micro-creation limits to craft complete large-scale immersive virtual social spaces.</p>
+                <h3 class="text-2xl font-bold text-brand-textDark" data-i18n="room_title">Room Creation</h3>
+                <p class="text-brand-textSecondary text-sm mt-1" data-i18n="room_subtitle">Breaking beyond Invention micro-creation limits to craft complete large-scale immersive virtual social spaces.</p>
             </div>
             <div class="bg-brand-grayBg rounded-3xl border border-brand-border overflow-hidden">
                 <div class="w-full aspect-video overflow-hidden border-b border-brand-border">
@@ -587,10 +592,10 @@
                 </div>
                 <div class="p-8 space-y-4">
                     <div>
-                        <h4 class="text-2xl font-bold text-brand-textDark">MasterBartender: Independent Room Creation</h4>
-                        <p class="text-xs text-brand-textSecondary font-bold mt-1">Global Visitors: 1,400+</p>
+                        <h4 class="text-2xl font-bold text-brand-textDark" data-i18n="room_mb_title">MasterBartender: Independent Room Creation</h4>
+                        <p class="text-xs text-brand-textSecondary font-bold mt-1" data-i18n="room_mb_visitors">Global Visitors: 1,400+</p>
                     </div>
-                    <p class="text-sm text-brand-textSecondary leading-relaxed">
+                    <p class="text-sm text-brand-textSecondary leading-relaxed" data-i18n="room_mb_desc">
                         As my premier independent room creation, MasterBartender showcases a fully realized 
                         arcade-style game inspired by the retro classic Root Beer Tapper. To push past platform 
                         constraints, I expanded the technical possibilities of the Maker Pen by integrating 
@@ -605,8 +610,8 @@
         <!-- CREATION METHOD -->
         <section id="method-section" class="space-y-8 scroll-mt-24">
             <div class="border-b border-brand-border pb-4">
-                <h3 class="text-2xl font-bold text-brand-textDark">Creation Process</h3>
-                <p class="text-brand-textSecondary text-sm mt-1">
+                <h3 class="text-2xl font-bold text-brand-textDark" data-i18n="method_title">Creation Process</h3>
+                <p class="text-brand-textSecondary text-sm mt-1" data-i18n-html="method_subtitle">
                     My development workflow leverages the Rec Room Maker Pen as a full-stack creation tool. 
                     I execute the entire pipeline independently&mdash;from asset modeling and spatial layout to 
                     programming advanced visual scripts, designing behavior trees, and architecting complex 
@@ -623,9 +628,9 @@
                             <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
                                 <i data-lucide="box" class="w-5 h-5"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-brand-textDark">3D Modeling</h4>
+                            <h4 class="text-lg font-bold text-brand-textDark" data-i18n="method_3d_title">3D Modeling</h4>
                         </div>
-                        <p class="text-xs text-brand-textSecondary leading-relaxed">
+                        <p class="text-xs text-brand-textSecondary leading-relaxed" data-i18n="method_3d_desc">
                             A quick demonstration of building 3D models from scratch using the Rec Room Maker Pen, 
                             capturing the step-by-step creation of an detailed cake model.
                         </p>
@@ -640,9 +645,9 @@
                             <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-brand-orange shrink-0">
                                 <i data-lucide="binary" class="w-5 h-5"></i>
                             </div>
-                            <h4 class="text-lg font-bold text-brand-textDark">Circuit Programming (Circuits V2)</h4>
+                            <h4 class="text-lg font-bold text-brand-textDark" data-i18n="method_circuit_title">Circuit Programming (Circuits V2)</h4>
                         </div>
-                        <p class="text-xs text-brand-textSecondary leading-relaxed">
+                        <p class="text-xs text-brand-textSecondary leading-relaxed" data-i18n="method_circuit_desc">
                             A concise walkthrough of programming circuit logic inside Rec Room, featuring the 
                             development of touch-activated color-changing windows.
                         </p>
@@ -666,7 +671,7 @@
                 </div>
                 <div>
                     <span class="font-extrabold text-sm text-brand-textDark uppercase">Rec Room Portfolio</span>
-                    <span class="text-[10px] text-brand-textSecondary block uppercase font-bold tracking-wider">Digital Content Creator & Community Manager</span>
+                    <span class="text-[10px] text-brand-textSecondary block uppercase font-bold tracking-wider" data-i18n="footer_subtitle">Digital Content Creations</span>
                 </div>
             </div>
             <div class="flex items-center gap-4">
@@ -693,8 +698,127 @@
     <script defer src="/_vercel/insights/script.js"></script>
 
     <script>
+        // i18n translations
+        const translations = {
+            zh: {
+                nav_subtitle: '數位內容創作',
+                nav_overview: '概覽',
+                nav_stats: '數據',
+                nav_dorm: 'Smart Dorm',
+                nav_room: '房間創作',
+                nav_method: '創作方式',
+                header_title: '虛擬實境數位創作：3D 建模與程式設計作品集',
+                header_desc: '此作品集展示了我在虛擬實境平台 Rec Room 上開發的多項創作。我透過平台內建的創作工具 Maker Pen，設計 3D 模型、開發了基於電路的邏輯系統，並創建了具備多種互動機制的 Dorm Room，透過持續迭代、實驗與邏輯驅動的設計，累積了 <span class="text-brand-orange font-extrabold">7,700+ 訂閱者</span>。',
+                intro_title: '專案類型',
+                intro_desc: '我的作品集主要聚焦於 Dorm Room 設計——Rec Room 平台上使用者的預設進入環境。在這個空間中，我專注於打造兼具美感、空間效率與互動機制的作品。除了這些精巧的空間設計外，我也挑戰大型 Room Creation，建構為多人體驗設計的廣闊環境，不斷突破我的設計能力邊界。',
+                journey_title: '創作歷程',
+                journey_desc: '我在 2021 年以玩家身份加入 Rec Room，但很快就發現了自由創作的樂趣。我一直熱愛構思古怪、創新的概念，而這個平台提供了完美的空間，讓我在 VR 中實現我的想像和創意。它提供了一個入門門檻低但技術天花板高的理想環境。這開啟了我三年持續學習與創作的旅程，主要投入在 Smart Dorm 系列，以及各種小型專案和完整房間。<br><br>由於 Rec Room 於 2026 年 6 月 1 日關閉，且這些特定格式的作品無法完整匯出，我製作了這個作品集盡可能地記錄我的作品。',
+                philosophy_title: '設計理念',
+                philosophy_desc: '我的核心方法是在有限的空間和資源中，透過巧思和合適的工具來最大化創造力。許多創作者追求超寫實和精細細節，而我傾向於極簡美學，融入隱藏機制和創新、引人入勝的互動——在空間中釋放想像力的全部潛能。',
+                stats_title: '數據統計',
+                stats_tokens_label: '總獲得代幣',
+                stats_tokens_desc: '高度的市場吸引力與設計流暢度，曾躋身年度銷售前 100 名。',
+                stats_subs_label: '訂閱者',
+                stats_subs_desc: '透過持續提供高品質、互動式虛擬空間，累積了 7,700+ 位訂閱者。',
+                stats_invention_title: '商品數據',
+                stats_th_invention: '商品',
+                stats_th_earned: '獲得代幣',
+                stats_th_purchases: '購買數',
+                stats_room_title: '房間',
+                stats_room_desc: '這個房間是一個社交空間，包含一個靈感來自經典遊戲「Root Beer Tapper」的遊戲。',
+                stats_room_visits_label: '造訪次數',
+                stats_room_visits_value: '1,400+ 位訪客',
+                dorm_title: 'Smart Dorm — 智慧宿舍系列',
+                dorm_subtitle: '在極度受限的空間中，探索具高度功能性的空間設計。',
+                sd1_title: 'Smart Dorm：我在 Rec Room 創作旅程的起點',
+                sd1_desc: '作為我在 Rec Room 的首個商業發布作品，這個專案探索了空間優化與互動設計。我為 Dorm Room 設計了動態的空間利用機制：按鈕啟動的變形床、從牆面展開的電視，以及可收縮的樓梯。<br><br>獲得 Rec Room 官方推薦後，該專案在首週即達成上千筆銷售。這次爆發性的首秀驗證了我的設計方法，並為我標誌性的 Smart Dorm 系列奠定了基礎。',
+                sd2_title: 'Smart Dorm 2：極簡美學與更流暢的機制',
+                sd2_desc: '運用第一個專案的經驗，我設計了第二代作品，採用極簡、現代的美學和更流暢的使用者體驗。我用創新的手法設計了更獨特的體驗，例如變色窗戶和沉浸式隧道懸浮車轉場效果。這個專案最終成為我迄今為止最暢銷、最成功的創作。',
+                sd3_title: 'Smart Dorm 3：探索開闊的視覺空間設計',
+                sd3_desc: '靈感來自電影《超人特攻隊2》中的未來豪宅，這個專案是我首次嘗試設計開闊的視覺空間。這個宿舍的亮點是一個隱藏式室內瀑布和水流，與全新的智慧家具套件。',
+                sdorm_title: 'sDorm：新一代 Smart Dorm',
+                sdorm_desc: '結合我探索過的各種技術，這個專案整合了所有經過驗證的方法，包括可變形的室內空間。這個作品的技術突破是一個功能完整的公車系統，透過複雜的邏輯電路和系統設計打造。',
+                sd4_title: 'Smart Dorm 4：最後一舞，美感與技術的極致',
+                sd4_desc: '在此最終作品中，我用了更進階且簡練的電路程式設計，與更精緻、現代的美學融合。這個專案的核心亮點：一個精密設計的射球小遊戲和一個極具未來感的無人機外送系統。',
+                room_title: '房間創作',
+                room_subtitle: '跳脫 Invention 小型創作的框架，嘗試打造完整的大型虛擬社交空間。',
+                room_mb_title: 'MasterBartender：獨立房間創作',
+                room_mb_visitors: '全球訪客：1,400+',
+                room_mb_desc: '作為我的首個獨立房間創作，MasterBartender 主打一個靈感來自復古經典遊戲 Root Beer Tapper 的送酒遊戲。我透過整合在 Unity 中建構的自訂素材來擴展創作的可能性。',
+                method_title: '創作方式',
+                method_subtitle: '我的開發方式以 Rec Room Maker Pen 作為全端創作工具，獨立執行整個流程——從素材建模和空間佈局，到編寫進階視覺腳本、設計行為樹，以及架構複雜的互動系統。',
+                method_3d_title: '3D 建模',
+                method_3d_desc: '使用 Rec Room Maker Pen 從零開始建構 3D 模型的簡易示範，展示了一個精緻蛋糕模型的逐步創作過程。',
+                method_circuit_title: '電路程式設計（Circuits V2）',
+                method_circuit_desc: '在 Rec Room 內編寫電路邏輯的簡易示範，展示了觸控啟動變色窗戶的開發過程。',
+                footer_subtitle: '數位內容創作',
+                label_earned: '獲得：',
+                label_purchases: '購買：'
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+
+            if (lang === 'en') {
+                // Reset to original English content
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    if (el._originalText !== undefined) {
+                        el.textContent = el._originalText;
+                    }
+                });
+                document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                    if (el._originalHTML !== undefined) {
+                        el.innerHTML = el._originalHTML;
+                    }
+                });
+            } else {
+                const t = translations[lang];
+                if (!t) return;
+
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (t[key]) {
+                        if (el._originalText === undefined) {
+                            el._originalText = el.textContent;
+                        }
+                        el.textContent = t[key];
+                    }
+                });
+                document.querySelectorAll('[data-i18n-html]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-html');
+                    if (t[key]) {
+                        if (el._originalHTML === undefined) {
+                            el._originalHTML = el.innerHTML;
+                        }
+                        el.innerHTML = t[key];
+                    }
+                });
+            }
+        }
+
         window.onload = function () {
             lucide.createIcons();
+
+            // Language toggle
+            const langToggle = document.getElementById('lang-toggle');
+            const langToggleMobile = document.getElementById('lang-toggle-mobile');
+            function updateLangButtons() {
+                const label = currentLang === 'en' ? '中文' : 'English';
+                langToggle.textContent = label;
+                langToggleMobile.textContent = label;
+            }
+            function toggleLanguage() {
+                currentLang = currentLang === 'en' ? 'zh' : 'en';
+                setLanguage(currentLang);
+                updateLangButtons();
+            }
+            langToggle.addEventListener('click', toggleLanguage);
+            langToggleMobile.addEventListener('click', toggleLanguage);
+
             document.getElementById('menu-toggle').addEventListener('click', () => {
                 document.getElementById('mobile-menu').classList.toggle('hidden');
             });
@@ -835,23 +959,37 @@
             // Navigation active state on scroll
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
+            const visibleSections = new Set();
+
+            function updateActiveNav() {
+                // Find the topmost visible section by DOM order
+                let activeId = null;
+                for (const section of sections) {
+                    if (visibleSections.has(section.id)) {
+                        activeId = section.id;
+                        break;
+                    }
+                }
+                if (!activeId) return;
+
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href').substring(1);
+                    const isActive = href === activeId ||
+                        (href === 'intro-section' && (activeId === 'journey-section' || activeId === 'philosophy-section'));
+                    link.classList.toggle('active', isActive);
+                });
+            }
 
             const sectionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        const id = entry.target.id;
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            // Map journey/philosophy sections to the overview link
-                            const href = link.getAttribute('href').substring(1);
-                            if (href === id || 
-                                (href === 'intro-section' && (id === 'journey-section' || id === 'philosophy-section'))) {
-                                link.classList.add('active');
-                            }
-                        });
+                        visibleSections.add(entry.target.id);
+                    } else {
+                        visibleSections.delete(entry.target.id);
                     }
                 });
-            }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+                updateActiveNav();
+            }, { threshold: 0.15, rootMargin: '-80px 0px -35% 0px' });
 
             sections.forEach(section => sectionObserver.observe(section));
 
