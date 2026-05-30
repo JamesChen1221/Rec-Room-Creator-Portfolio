@@ -181,7 +181,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
                     <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider" data-i18n="stats_tokens_label">Total Earned Tokens</span>
-                    <div class="text-2xl font-extrabold text-brand-textDark mt-1"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-6 h-6 align-middle"> <span class="count-up" data-count="16000000" data-suffix="+">0</span></div>
+                    <div class="text-2xl font-extrabold text-brand-textDark mt-1"><img src="assets/images/r_token_symbol.png" alt="Token" class="inline-block token-icon w-6 h-6 align-middle"> <span class="count-up" data-count="16000000" data-suffix="+" data-abbr>0</span></div>
                     <p class="text-[10px] text-brand-textSecondary font-semibold mt-1" data-i18n="stats_tokens_desc">
                         High market appeal and design fluency, having ranked among 
                         the Top 100 Sellers of the Year.
@@ -189,7 +189,7 @@
                 </div>
                 <div class="bg-brand-grayBg rounded-2xl p-5 border border-brand-border">
                     <span class="text-xs font-bold text-brand-textSecondary uppercase tracking-wider" data-i18n="stats_subs_label">Subscribers</span>
-                    <div class="text-2xl font-extrabold text-brand-textDark mt-1"><span class="count-up" data-count="7700" data-suffix="+">0</span></div>
+                    <div class="text-2xl font-extrabold text-brand-textDark mt-1"><span class="count-up" data-count="7700" data-suffix="+" data-abbr>0</span></div>
                     <p class="text-[10px] text-brand-textSecondary font-semibold mt-1" data-i18n="stats_subs_desc">
                         Grew a subscriber base to 7.7K+ by consistently delivering 
                         high-quality, interactive virtual spaces.
@@ -952,33 +952,33 @@
             });
 
             // Count-up animation for numbers
-            function formatCount(value, target) {
-                // Use abbreviation for millions
-                if (target >= 1000000) {
-                    const m = value / 1000000;
-                    return m % 1 === 0 ? m.toFixed(0) + 'M' : m.toFixed(1) + 'M';
-                }
-                // Use k for thousands if target uses k scale (7700 -> 7.7k)
-                if (target >= 1000 && target < 10000 && target % 1000 !== 0) {
-                    return (value / 1000).toFixed(1) + 'k';
-                }
-                return value.toLocaleString();
-            }
-
             function animateCount(el, target, duration) {
                 const suffix = el.dataset.suffix || '';
+                const useAbbr = el.hasAttribute('data-abbr');
                 const startTime = performance.now();
                 function update(now) {
                     const progress = Math.min((now - startTime) / duration, 1);
                     // Ease-out cubic for natural deceleration
                     const eased = 1 - Math.pow(1 - progress, 3);
                     const current = Math.floor(eased * target);
-                    el.textContent = formatCount(current, target) + (progress < 1 ? '' : suffix);
+                    el.textContent = fmt(current) + (progress < 1 ? '' : suffix);
                     if (progress < 1) {
                         requestAnimationFrame(update);
                     } else {
-                        el.textContent = formatCount(target, target) + suffix;
+                        el.textContent = fmt(target) + suffix;
                     }
+                }
+                function fmt(value) {
+                    if (useAbbr) {
+                        if (target >= 1000000) {
+                            const m = value / 1000000;
+                            return m % 1 === 0 ? m.toFixed(0) + 'M' : m.toFixed(1) + 'M';
+                        }
+                        if (target >= 1000 && target < 10000 && target % 1000 !== 0) {
+                            return (value / 1000).toFixed(1) + 'k';
+                        }
+                    }
+                    return value.toLocaleString();
                 }
                 requestAnimationFrame(update);
             }
